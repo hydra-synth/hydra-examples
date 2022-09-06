@@ -30,7 +30,7 @@ parseTidal = (args) => {
 // address of the OSC message, defined in the file tidal-forward.sc
 // open the console to see the messages, using Ctrl+Alt+I (windows), Cmd+Opt+I (mac), or Ctrl + Shift + I(linux)
 //
-msg.on('/play2', (args) => {
+msg.on('/dirt/play', (args) => {
 // log osc results to console
  //log(args)
  tidal = parseTidal(args)
@@ -48,7 +48,7 @@ blend = 0
 // receive args from supercollider in hydra. Tidal sends OSC messages
 // ahead of the time the sound is plays, so it is necessary to use setTimeout
 // in order to wait to change the visuals
-msg.on('/play2', (args) => {
+msg.on('/dirt/play', (args) => {
   // parse the values from tidal
  var tidal = parseTidal(args)
 //
@@ -81,7 +81,7 @@ osc(20, 0.1, 0.8)
 freq = 10
 numSides = 0
 //
-msg.on('/play2', (args) => {
+msg.on('/dirt/play', (args) => {
   // parse the values from tidal
  var tidal = parseTidal(args)
 //
