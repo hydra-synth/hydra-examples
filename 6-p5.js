@@ -76,3 +76,17 @@ src(s0)
   .scale(1.01)
   .hue(0.04)
   .out()
+
+
+//example using mouse and webcam
+p1 = new P5()
+p1.draw = () => {
+p1.clear()
+p1.circle(p1.mouseX, p1.mouseY, p1.mouseIsPressed*50)}
+//
+s3.init({src: p1.canvas})
+s1.initCam(0)
+//
+src(o1).layer( src(s3).mask(src(s3)) ).out(o1)
+//
+src(s1).mult(src(o1)).out()
